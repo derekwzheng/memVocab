@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Memorize vocabulary</title>
+        <script>
+          var search = function(e, word) {
+            e.preventDefault();
+            window.open("http://mnemonicdictionary.com/?word=" + word, "mnemDic");
+            window.open("http://dict.eudic.net/dicts/en/" + word, "ecDict");
+            window.open("https://www.google.nl/search?tbm=isch&q=" + word,"gImage");
+          };
+        </script>
+	</head>
+  <body>
+
+    <form>
+      word: <input type="text" name="word" id="inputWord"><br>
+      <button onclick="search(event, getElementById('inputWord').value)">
+        SEARCH
+      </button>
+    </form>
+
+  </body>
+</html>
